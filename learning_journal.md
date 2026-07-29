@@ -59,6 +59,12 @@ New concepts learned
 -DEBUG=True is useful during development but should be turned off in production.
 -SQLite is Django's default database and is suitable for development.
 
+Django follows a request-response cycle.
+urls.py maps URLs to views.
+views.py contains the application logic.
+render() returns an HTML template to the browser.
+Templates are stored in the templates folder and configured through settings.py.
+
 ---
 
 ## Problems I faced
