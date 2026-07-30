@@ -10,31 +10,77 @@ Register
 
     <div class="col-md-6">
 
-        <div class="card shadow">
+        <div class="card shadow-lg">
 
-            <div class="card-body">
+            <div class="card-body p-4">
 
                 <h2 class="text-center mb-4">
-
-                    Create Account
-
+                    Create Your Account
                 </h2>
 
                 <form method="post">
 
                     {% csrf_token %}
 
-                    {{ form.as_p }}
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Username
+                        </label>
+
+                        {{ form.username }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Email
+                        </label>
+
+                        {{ form.email }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Role
+                        </label>
+
+                        {{ form.role }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Password
+                        </label>
+
+                        {{ form.password1 }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Confirm Password
+                        </label>
+
+                        {{ form.password2 }}
+                    </div>
 
                     <button
                         type="submit"
                         class="btn btn-success w-100">
 
-                        Register
+                        Create Account
 
                     </button>
 
                 </form>
+
+                <div class="text-center mt-3">
+
+                    Already have an account?
+
+                    <a href="{% url 'login' %}">
+                        Login
+                    </a>
+
+                </div>
 
             </div>
 

@@ -6,8 +6,50 @@ Login
 
 {% block content %}
 
-<h2>Login</h2>
+<div class="row justify-content-center">
 
-<p>This is our future login page.</p>
+    <div class="col-md-5">
+
+        <div class="card shadow-lg">
+
+            <div class="card-body p-4">
+
+                <h2 class="text-center mb-4">
+                    Login
+                </h2>
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <button
+                        class="btn btn-primary w-100"
+                        type="submit">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="text-center mt-3">
+
+                    Don't have an account?
+
+                    <a href="{% url 'register' %}">
+                        Register
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 {% endblock %}
