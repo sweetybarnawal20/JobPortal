@@ -65,6 +65,14 @@ views.py contains the application logic.
 render() returns an HTML template to the browser.
 Templates are stored in the templates folder and configured through settings.py.
 
+New concepts learned
+A model is a blueprint for a database table.
+Django models are written in Python.
+makemigrations creates migration files (database change plans).
+migrate applies those changes to the database.
+A custom User model should be created before building authentication.
+AUTH_USER_MODEL tells Django to use our custom User model.
+
 ---
 
 ## Problems I faced
