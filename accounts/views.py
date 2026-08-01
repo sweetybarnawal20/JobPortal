@@ -18,9 +18,13 @@ def login_view(request):
 
         if form.is_valid():
 
-            login(request, form.get_user())
+            user = form.get_user()
+            login(request, user)
 
-            return redirect("home")
+            if user.role == "CANDIDATE":
+                return redirect("candidate_dashboard")
+            elif user.role == "EMPLOYER":
+                return redirect("employer_dashboard")
 
     else:
 
