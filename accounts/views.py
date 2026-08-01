@@ -4,6 +4,7 @@ from .forms import UserRegistrationForm
 from .forms import UserLoginForm
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
+from .decorators import candidate_required
 
 # Create your views here.
 def home(request):
@@ -61,6 +62,7 @@ def logout_view(request):
         return redirect("home")
     
 @login_required
+@candidate_required
 def candidate_dashboard(request):
 
     return render(
