@@ -3,6 +3,7 @@ from django.contrib.auth import login
 from .forms import UserRegistrationForm
 from .forms import UserLoginForm
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def home(request):
@@ -58,5 +59,13 @@ def register_view(request):
 def logout_view(request):
         logout(request)
         return redirect("home")
+    
+@login_required
+def candidate_dashboard(request):
+
+    return render(
+        request,
+        "accounts/candidate_dashboard.html"
+    )    
     
     
