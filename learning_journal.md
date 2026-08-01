@@ -102,3 +102,26 @@ Date: 2026-07-30
 ✔ Improved Bootstrap UI
 ✔ Fixed import and form errors
 ✔ Committed progress using Git
+
+# Day 3 - Candidate Profile & Django Signals
+Date: 2026-08-01
+
+✔ Designed database architecture for the Job Portal
+✔ Learned why User, CandidateProfile, and EmployerProfile should be separate models
+✔ Understood database normalization and avoiding unnecessary NULL values
+✔ Created the CandidateProfile model
+✔ Learned OneToOneField relationship
+✔ Learned on_delete=models.CASCADE
+✔ Learned the purpose of blank=True and null=True
+✔ Installed and configured Pillow for ImageField support
+✔ Created and applied Django migrations
+✔ Learned how makemigrations and migrate work internally
+✔ Learned the purpose of Django Signals
+✔ Created signals.py
+✔ Learned post_save signal
+✔ Learned @receiver decorator
+✔ Implemented automatic CandidateProfile creation after user registration
+✔ Learned the purpose of the created parameter in signals
+✔ Registered models in Django Admin
+✔ Verified automatic profile creation through the Admin Panel
+✔ Committed progress using Git
