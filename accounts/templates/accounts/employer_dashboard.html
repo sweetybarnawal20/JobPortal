@@ -1,0 +1,45 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}
+Employer Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2>
+        Welcome,
+        {{ user.username }} 👋
+    </h2>
+
+    <hr>
+
+    <h5>
+        Role:
+        {{ user.role }}
+    </h5>
+
+    <div class="list-group mt-4">
+
+        <a href="#" class="list-group-item list-group-item-action">
+            Company Profile
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action">
+            Post New Job
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action">
+            Manage Jobs
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action">
+            View Applicants
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

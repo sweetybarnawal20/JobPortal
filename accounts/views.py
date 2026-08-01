@@ -5,6 +5,7 @@ from .forms import UserLoginForm
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from .decorators import candidate_required
+from .decorators import employer_required
 
 # Create your views here.
 def home(request):
@@ -68,6 +69,15 @@ def candidate_dashboard(request):
     return render(
         request,
         "accounts/candidate_dashboard.html"
-    )    
+    )  
+    
+@login_required
+@employer_required
+def employer_dashboard(request):
+
+    return render(
+        request,
+        "accounts/employer_dashboard.html"
+    )      
     
     
