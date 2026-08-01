@@ -86,3 +86,19 @@ AUTH_USER_MODEL tells Django to use our custom User model.
 - What is manage.py?
 - What is settings.py?
 - What are Django apps?
+
+# Day 2 - Project Setup
+Date: 2026-07-30
+
+✔ Built user registration functionality
+✔ Customized Django registration form
+✔ Learned Django Forms
+✔ Learned UserCreationForm
+✔ Learned AuthenticationForm
+✔ Built login page
+✔ Implemented login functionality
+✔ Learned POST requests
+✔ Understood why CSRF token is required
+✔ Improved Bootstrap UI
+✔ Fixed import and form errors
+✔ Committed progress using Git

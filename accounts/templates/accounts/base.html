@@ -32,21 +32,44 @@
 
         <div>
 
-            <a href="{% url 'login' %}"
-               class="btn btn-outline-light me-2">
+    {% if user.is_authenticated %}
 
-                Login
+        <span class="text-white me-3">
 
-            </a>
+            Welcome,
+            {{ user.username }}
 
-            <a href="{% url 'register' %}"
-               class="btn btn-success">
+        </span>
 
-                Register
+        <a
+            href="{% url 'logout' %}"
+            class="btn btn-danger">
 
-            </a>
+            Logout
 
-        </div>
+        </a>
+
+    {% else %}
+
+        <a
+            href="{% url 'login' %}"
+            class="btn btn-outline-light me-2">
+
+            Login
+
+        </a>
+
+        <a
+            href="{% url 'register' %}"
+            class="btn btn-success">
+
+            Register
+
+        </a>
+
+    {% endif %}
+
+</div>
 
     </div>
 
