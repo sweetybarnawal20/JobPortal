@@ -60,4 +60,42 @@ class CandidateProfile(models.Model):
     )
 
     def __str__(self):
-        return self.user.username    
+        return self.user.username   
+    
+class EmployerProfile(models.Model):
+
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
+
+    company_name = models.CharField(
+        max_length=200,
+    )
+
+    company_logo = models.ImageField(
+        upload_to="company_logos/",
+        blank=True,
+        null=True,
+    )
+
+    website = models.URLField(
+        blank=True,
+    )
+
+    location = models.CharField(
+        max_length=200,
+        blank=True,
+    )
+
+    industry = models.CharField(
+        max_length=100,
+        blank=True,
+    )
+
+    company_description = models.TextField(
+        blank=True,
+    )
+
+    def __str__(self):
+        return self.company_name     
