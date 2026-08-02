@@ -125,3 +125,14 @@ Date: 2026-08-01
 ✔ Registered models in Django Admin
 ✔ Verified automatic profile creation through the Admin Panel
 ✔ Committed progress using Git
+
+# Day 4 - Employer Profile & Django Signals
+Date:8/2/2026
+
+✔ Created EmployerProfile model
+✔ Learned why employers need a separate profile model
+✔ Updated Django Signals to automatically create EmployerProfile
+✔ Registered EmployerProfile in Django Admin
+✔ Verified automatic EmployerProfile creation
+✔ Learned how Django Admin helps verify database records
+✔ Committed progress using Git

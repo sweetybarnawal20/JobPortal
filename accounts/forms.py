@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 
-from .models import User
+from .models import CandidateProfile, User
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -71,3 +71,19 @@ class UserLoginForm(AuthenticationForm):
             }
         )
     )
+    
+class CandidateProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = CandidateProfile
+
+        fields = [
+            "phone",
+            "address",
+            "bio",
+            "skills",
+            "education",
+            "experience",
+            "resume",
+            "profile_picture",
+        ]    
